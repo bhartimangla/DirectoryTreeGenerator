@@ -1,0 +1,111 @@
+body {
+  background: #eee;
+  font-family: "times new roman", serif;
+  line-height: 30px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.box {
+  padding: 2%;
+}
+
+.add-folder {
+  color: #3490dc;
+}
+
+.remove {
+  color: red;
+}
+
+.close {
+  float: right;
+  top: 5px;
+  right: 5px;
+  position: absolute;
+}
+
+.close-btn {
+  background-color: #7f7f7f;
+  color: white;
+}
+
+#file {
+  margin-left: 10px;
+}
+
+label{
+  font-size: 25px;
+}
+
+input[type=checkbox], input[type=radio] {
+  width: 15px;
+  height: 15px;  
+}
+
+.icons {
+	display: inline-block;
+	position: absolute;
+  margin-left: 5px;
+}
+
+.add-folder, .remove {
+	cursor: pointer;
+  margin: 0px 2px 0px 2px;
+}
+
+.main-folder {
+  border-radius: 10%;
+  float: right;
+  color: white;
+  background-color: #3490dc;
+  border: #3490dc;
+  height: 40px;
+  width: 70px;
+  font-size: 18px;
+}
+
+.add-folder:hover, .remove:hover {
+  color: #514747;  
+}
+
+.directory-list ul {
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: 1px dashed #ddd;
+}
+
+li {
+  margin-bottom: 5px;
+
+}
+
+.directory-list li {
+  list-style: none;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.directory-list .folder,
+.directory-list .folder > a {
+  color: #777;
+  font-weight: bold;
+}
+
+.directory-list li:before {
+  margin-right: 10px;
+  content: "";
+  height: 20px;
+  vertical-align: middle;
+  width: 20px;
+  display: inline-block;
+  background-image: url("/images/file.svg");
+}
+
+.directory-list li.folder:before {
+  background-image: url("/images/folder.svg");
+  height: 40px;
+  width: 40px;
+}
