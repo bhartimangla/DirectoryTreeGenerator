@@ -23,7 +23,7 @@ After that run your migration commands
 
 php artisan migrate
 
-php artisan db:seeds
+php artisan db:seed
 
 Now Run your project with the following command-
 
