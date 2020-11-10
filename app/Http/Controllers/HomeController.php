@@ -89,7 +89,7 @@ class HomeController extends Controller
     public function deleteFileDirectory($id, $type) 
     {
         if ($type == "directory") {
-            $directory = Directory::where('id', $id)->first();
+            $directory = Directory::where('id', $id)->delete();
             // $directory = Directory::find($id);
             // $directory->subDirectories()->delete();
             // $directory->files()->delete();
@@ -105,7 +105,7 @@ class HomeController extends Controller
                 $linkedFile->delete();
             }
 
-            $directory->delete();
+            // $directory->delete();
 
             /*$linkedDirectoriesID = array();
             $linkedFilesID = array();
@@ -123,11 +123,12 @@ class HomeController extends Controller
             $deleteDirectories = Directory::whereIn('id', $linkedDirectoriesID)->delete();
             $deleteFiles = File::whereIn('id', $linkedFilesID)->delete();*/ 
 
-            if ($directory) {
+            return redirect('/home')->with('info','Directory successfully deleted!');
+            /*if ($directory) {
                 return redirect()->back()->with('info','Directory successfully deleted!');
             } else {
                 return redirect()->back()->with('info','Ooops! Please try again.');
-            }
+            }*/
 
         } elseif ($type == "file") {
             $file = File::where('id', $id)->delete();
