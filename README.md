@@ -5,6 +5,8 @@ Database name - DirectoryTreeGenerator
 After clone repository from github-
 Instrall composer & PHP >= 7.1.3 version
 
+Run Composer update
+
 Create copy of .env.example with name .env
 
 This is your environment file which is required by laravel project
@@ -16,8 +18,6 @@ After that run the following command-
 php artisan key:generate
 
 php artisan config:cache
-
-composer dump-autoload
 
 After that run your migration commands
 
